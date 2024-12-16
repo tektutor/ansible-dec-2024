@@ -139,6 +139,7 @@
 - it's a way we could package and distribute all the related playbooks, modules, plugins, etc in a single collection
 </pre>
 
+
 ## Lab - Install git in Ubuntu
 ```
 sudo apt update
@@ -148,6 +149,13 @@ sudo apt install -y git
 Expected output
 ![image](https://github.com/user-attachments/assets/3146d933-d75a-45c4-9c44-7a2501cf4c34)
 
+
+## Lab - Cloning the Training repository( one time activity )
+```
+cd ~
+git clone https://github.com/tektutor/ansible-dec-2024.git
+cd ansible-dec-2024
+```
 
 ## Lab - Install Ansible Core in Ubuntu
 ```
