@@ -159,7 +159,7 @@ Expected output
 ## Lab - Install git in Ubuntu
 ![image](https://github.com/user-attachments/assets/3146d933-d75a-45c4-9c44-7a2501cf4c34)
 
-## Lab - Install Ansible Core in Ubuntu
+## Lab - Install Ansible Core in Ubuntu ( on the Ansible Controller Machine )
 ```
 sudo apt update
 sudo apt install -y ansible-core
@@ -171,6 +171,25 @@ Expected output
 ![image](https://github.com/user-attachments/assets/d053e30e-303e-49df-9663-5e3d0a60991a)
 
 ## Lab - Pinging the windows machine using ansible ad-hoc command
+You need to create an inventory file with the your windows machine credentials 
+<pre>
+[2016-servers]
+152.67.176.35
+
+[2019-server]
+144.24.152.144
+
+[windows]
+144.24.152.144
+152.67.176.35
+
+[windows:vars]
+ansible_connection=winrm
+ansible_user=opc
+ansible_password=Nagejmca**7752
+ansible_winrm_server_cert_validation=ignore  
+</pre>
+
 ```
 cd ~/ansible-dec-2024
 git pull
