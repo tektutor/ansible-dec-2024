@@ -154,7 +154,67 @@ pip install "pywinrm>=0.3.0"
 Expected output
 ![image](https://github.com/user-attachments/assets/d053e30e-303e-49df-9663-5e3d0a60991a)
 
-# Lab - Cloning 
+# Lab - Configuring windows nodes to allow ansible connectivity
+### We need to configure WinRM connectivity in the Windows Ansible Node
+
+#### Windows Node Ansible Requirments	
+- PowerShell 3.0 or latest
+- .Net Framework 4.5 or latest
+
+### Finding PowerShell version from Windows Powershell prompt
+```
+$PSVersionTable
+```
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/a9722c67-f55f-482c-a4f1-1fa4beb95b1b)
+
+
+### Finding .Net Framework Version
+
+1. Open regedit
+
+2. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/8d97cfef-0cc0-4d81-a303-1d7d1d6ca7ac)
+
+
+### Configuring WinRM on Windows machine
+Download the file at below URL and save it in C:/Users/Administrator/Downloads/ConfigureRemotingForAnsible.ps1
+```
+https://github.com/ansible/ansible-documentation/blob/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
+```
+
+Now execute the below command
+```
+powershell.exe -ExecutionPolicy ByPass -File C:/Users/Administrator/Downloads/ConfigureRemotingForAnsible.ps1
+
+winrm enumerate winrm/config/Listener
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/08821a8e-2b7b-47d7-8ab9-6b8581781ae1)
+
+
+### Configuring Windows node with Basic authentication
+```
+Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+```
+
+### Verify if WinRM Listeners are running ( 2 listerners one for Http and other for Https expected )
+```
+winrm enumerate winrm/config/Listener
+```
+
+Expected output
+![image](https://github.com/tektutor/ansible-sep-2023/assets/12674043/23e5d406-e105-4c12-8786-215df8af72a1)
+
+
+### On the Ansible Controller machine (Ubuntu machine), make sure pywinrm is installed
+```
+pip install "pywinrm>=0.3.0"
+```
+
 
 ## Lab - Install git in Ubuntu
 ![image](https://github.com/user-attachments/assets/3146d933-d75a-45c4-9c44-7a2501cf4c34)
