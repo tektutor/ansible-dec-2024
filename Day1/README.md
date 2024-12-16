@@ -90,6 +90,10 @@
 - which means we need ansible core to develop/write playbook
 </pre>
 
+## Lab - Install git in Ubuntu
+![image](https://github.com/user-attachments/assets/3146d933-d75a-45c4-9c44-7a2501cf4c34)
+
+
 ## Lab - Install Ansible Core in Ubuntu
 ```
 sudo apt update
