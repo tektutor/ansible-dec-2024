@@ -285,3 +285,15 @@ Expected output
 ![image](https://github.com/user-attachments/assets/dfe7bf58-a1df-45e2-8769-0701efc0d8ea)
 ![image](https://github.com/user-attachments/assets/ffacec4c-b809-48f2-92ea-aa81f785a353)
 ![image](https://github.com/user-attachments/assets/845b3e95-ba09-458d-b085-3989f92d916c)
+
+## Lab - Getting ansible help about modules
+```
+ansible-doc setup
+ansible-doc win_file
+ansible-doc win_copy
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/5602f381-0b7f-4484-b1a9-b557d7f0521a)
+![image](https://github.com/user-attachments/assets/e05532c6-b254-4403-a327-a0296fd93dac)
+![image](https://github.com/user-attachments/assets/5f3416c5-5c9a-4603-a4db-3bc14f231593)
