@@ -256,6 +256,7 @@ You need to create an inventory file with the your windows machine credentials
 <pre>
 [windows]
 192.168.122.111
+192.168.122.207
   
 [windows:vars]
 ansible_connection=winrm
@@ -273,3 +274,14 @@ ansible -i inventory all -m win_ping
 
 Expected output
 ![image](https://github.com/user-attachments/assets/94ddb166-9023-4dfc-922b-d08a1175b7e1)
+
+## Lab - Collecting facts(server inventory)
+```
+ansible -i inventory 192.168.122.111 -m setup
+ansible -i inventory 192.168.122.207 -m setup
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/dfe7bf58-a1df-45e2-8769-0701efc0d8ea)
+![image](https://github.com/user-attachments/assets/ffacec4c-b809-48f2-92ea-aa81f785a353)
+![image](https://github.com/user-attachments/assets/845b3e95-ba09-458d-b085-3989f92d916c)
