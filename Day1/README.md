@@ -267,7 +267,7 @@ ansible_winrm_server_cert_validation=ignore
 ```
 cd ~/ansible-dec-2024
 git pull
-cd Day1/ansible
+touch inventory
 ansible -i inventory all -m win_ping
 ```
 
