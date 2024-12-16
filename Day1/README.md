@@ -247,20 +247,13 @@ Expected output
 ## Lab - Pinging the windows machine using ansible ad-hoc command
 You need to create an inventory file with the your windows machine credentials 
 <pre>
-[2016-servers]
-152.67.176.35
-
-[2019-server]
-144.24.152.144
-
 [windows]
-144.24.152.144
-152.67.176.35
-
+192.168.122.111
+  
 [windows:vars]
 ansible_connection=winrm
-ansible_user=opc
-ansible_password=Nagejmca**7752
+ansible_user=Administrator
+ansible_password=rps@123
 ansible_winrm_server_cert_validation=ignore  
 </pre>
 
