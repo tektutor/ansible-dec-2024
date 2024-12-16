@@ -153,3 +153,30 @@ pip install "pywinrm>=0.3.0"
 
 Expected output
 ![image](https://github.com/user-attachments/assets/d053e30e-303e-49df-9663-5e3d0a60991a)
+
+# Lab - Cloning 
+
+## Lab - Install git in Ubuntu
+![image](https://github.com/user-attachments/assets/3146d933-d75a-45c4-9c44-7a2501cf4c34)
+
+## Lab - Install Ansible Core in Ubuntu
+```
+sudo apt update
+sudo apt install -y ansible-core
+sudo apt install python3-pip -y
+pip install "pywinrm>=0.3.0"
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d053e30e-303e-49df-9663-5e3d0a60991a)
+
+## Lab - Pinging the windows machine using ansible ad-hoc command
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day1/ansible
+ansible -i inventory all -m win_ping
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/94ddb166-9023-4dfc-922b-d08a1175b7e1)
