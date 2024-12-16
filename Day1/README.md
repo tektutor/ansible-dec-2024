@@ -30,5 +30,22 @@
 - easy to learn
 - easy to install
 - follows simple architecture
-  
+- ansible nodes
+  - these are servers we can perform automation using ansible 
+  - dependent softwares
+    - Unix/Linux/Mac Server
+      - Python
+      - SSH Server
+    - Windows Server
+      - Powershell
+      - WinRM
+- Ansible Controller Machine
+  - the machine where ansible is installed is called Ansible Controller Machine(ACM)
+  - it could a laptop/desktop
+  - officially Ansible is only supported on Linux machines, but it works in Unix/Mac
+  - Windows machine can't be used as a Ansible Controller Machine
+  - Windows machine can be managed by Ansible
+- Inventory
+  - is a plain text file which follows an INI style format
+  - captures connectivity details, IP address/hostname, username, password, ssh-key's etc
 </pre>
