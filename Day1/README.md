@@ -142,7 +142,7 @@
 ## Lab - Install git in Ubuntu
 ```
 sudo apt update
-sudo apt install -y ansible-core
+sudo apt install -y git
 ```
 
 Expected output
