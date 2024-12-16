@@ -94,6 +94,8 @@
 ```
 sudo apt update
 sudo apt install -y ansible-core
+sudo apt install python3-pip -y
+pip install "pywinrm>=0.3.0"
 ```
 
 Expected output
