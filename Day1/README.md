@@ -143,7 +143,7 @@
 ## Lab - Install git in Ubuntu
 ```
 sudo apt update
-sudo apt install -y git
+sudo apt install -y git neovim
 ```
 
 Expected output
