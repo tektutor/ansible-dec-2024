@@ -364,4 +364,30 @@ Expected output
 - Gives a summary of output of the powershell execution
 </pre>
 
-## Lab - 
+## Lab - Creating a folder and copy a file using ansible playbook
+<pre>
+- name: This playbook demonstrates creating a folder and placing a file onto that folder
+  hosts: all
+  tasks:
+  - name: Create folder
+    win_file:
+      path: C:\myfolder
+      state: directory
+
+  - name: Copy a file
+    win_copy:
+      src: myfile.txt
+      dest: C:\myfolder\myfile.txt
+</pre>
+
+Executing the playbook
+```
+ansible-playbook -i inventory create-file-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/104d7dc9-9b11-4337-ad56-9297857540d9)
+![image](https://github.com/user-attachments/assets/f77ee864-6a2d-41ec-8996-71333203a532)
+![image](https://github.com/user-attachments/assets/feac8e45-931d-4702-93d7-ebf20a8deab8)
+![image](https://github.com/user-attachments/assets/5f073d5a-fbf2-4603-a14b-4c83351d06f3)
+
