@@ -314,3 +314,23 @@ ansible-playbook -i inventory first-playbook.yml
 
 Expected output
 ![image](https://github.com/user-attachments/assets/7121ddf5-db30-4251-97d2-5dd25e39ae57)
+
+## Lab - Create a folder on the windows servers(ansible nodes) using playbook
+<pre>
+- name: Create a folder in windows ansible node
+  hosts: all
+  tasks:
+  - name: Create directory
+    win_file:
+      path: C:/Ansible
+      state: directory  
+</pre>
+
+Run the playbook
+```
+ansible-playbook -i inventory create-folder-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/1c062822-ccda-4229-b07d-fd7f38deb2a8)
+![image](https://github.com/user-attachments/assets/d7ab4c5d-66fd-4228-abce-fd24bff34c8c)
