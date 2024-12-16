@@ -11,14 +11,28 @@
   - Ansible
 </pre>
 
+## Puppet Overview
+<pre>
+- is the oldest configuration management tool
+- it follows client/server architecture
+- every configuration management supports a specific domain specific language (DSL) to automate stuffs 
+- the DSL used by Puppet is Puppet language ( a proprietary declarative language )
+- Puppet installation is very complex and time consuming
+- learning curve is quite steep
+- uses proprietary tools on the servers that needs to be managed by chef
+- Puppet architecture is very complex
+</pre>
+
+
 ## Chef Overview
 <pre>
 - is a configuration management tool
 - it follows client/server architecture
 - the domain specific language (DSL) - the automation language used by Chef
 - the DSL used by Chef is Ruby ( scripting language )
-- Chef installation is very complex and time consuming
-- learning curve is quiet steep
+- Chef installation is very complex and time consuming as Puppet
+- Chef provides loads of tools, hence its very powerful and confusing
+- learning curve is quite steep
 - uses proprietary tools on the servers that needs to be managed by chef
 - chef architecture is very complex
 </pre>
@@ -88,6 +102,41 @@
 - functionally AWX and Ansible Tower(Ansible Automation Platform) are same
 - you will world-wide support from Red Hat (an IBM company)
 - which means we need ansible core to develop/write playbook
+</pre>
+
+## Ansible Modules
+<pre>
+- ansible supports many built-in ansible modules to automate
+- for instance 
+  - file module helps in creating files and folders with specific permissions
+  - copy module helps in copying from/to ACM to ansible nodes and vice versa
+  - all unix/linux/mac ansible modules are developed as Python scripts
+  - all windows ansible modules are developed as Powershell scripts
+  - we can also write out own custom ansible modules, when there is no readily available module to automate certain rare stuffs
+</pre>
+
+## Ansible Plugins
+<pre>
+- ansible plugins helps us extend the core functionality of ansible
+- for instance
+  - become plugin helps us perform certain tasks as sudo(administrative) users
+</pre>
+
+## Ansible Roles
+<pre>
+- is way we could follow best practices and ensure our automation code can be reused across many ansible playbooks
+- ansible roles can't be executed directly, while they can be invoked via ansible playbooks
+- ansible roles can be downloaded and installed via ansible-galaxy tool
+- we could also develop our own ansible role
+- For example
+  - we could develop an ansible role to install Oracle Database in Windows 2016/2019 Server, Ubuntu Linux, etc
+</pre>
+
+## Ansible Collections
+<pre>
+- is a reusable code that has many different kinds of reusable code in ansible
+- it could have one or more roles, custom modules, plugins, filters, etc.,
+- it's a way we could package and distribute all the related playbooks, modules, plugins, etc in a single collection
 </pre>
 
 ## Lab - Install git in Ubuntu
