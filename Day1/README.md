@@ -154,7 +154,7 @@ pip install "pywinrm>=0.3.0"
 Expected output
 ![image](https://github.com/user-attachments/assets/d053e30e-303e-49df-9663-5e3d0a60991a)
 
-# Lab - Configuring windows nodes to allow ansible connectivity
+# Lab - Configuring windows nodes to allow ansible connectivity (KVM VM)
 ### We need to configure WinRM connectivity in the Windows Ansible Node
 
 #### Windows Node Ansible Requirments	
