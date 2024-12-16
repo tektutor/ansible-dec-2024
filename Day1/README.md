@@ -53,3 +53,39 @@
   2. AWX - supports webconsole, opensource, built on top of Ansible core
   3. Red Hat Ansible Tower - enterprise commercial product, built on top of AWX 
 </pre>
+
+## Ansible Core
+<pre>
+- this is developed in Python by Michael Deehan
+- Michael Deehan is a former employee of Red Hat
+- Michael Deehan founded a company called Ansible Inc and developed Ansible core as an open source product
+- perfect alternate to Puppet/Chef
+- supports only command line
+- very well documented open source product
+- agent less
+- can be installed in Linux, Unix and Mac
+- can manage Windows, Linux, Mac, etc., ansible nodes
+- doesn't support role based access ( can't create different types of ansible users )
+- doesn't historial logging mechanism
+</pre>
+
+## AWX
+<pre>
+- is developed on top of Ansible core
+- supports webconsole but no command line
+- it can be installed on a centralized server within your organization
+- can be accessed from web browser only
+- supports role based access control
+- supports logs for each playbook execution
+- you don't get any support
+- can't develop ansible playbook, you can only run them
+- which means we need ansible core to develop/write playbook
+</pre>
+
+## Red Hat Ansible Tower
+<pre>
+- it is developed on top of AWX
+- functionally AWX and Ansible Tower(Ansible Automation Platform) are same
+- you will world-wide support from Red Hat (an IBM company)
+- which means we need ansible core to develop/write playbook
+</pre>
