@@ -157,6 +157,13 @@ git clone https://github.com/tektutor/ansible-dec-2024.git
 cd ansible-dec-2024
 ```
 
+## Lab - Each time I commit changes, you need to do git pull as shown below
+```
+cd ~
+cd ansible-dec-2024
+git pull
+```
+
 ## Lab - Install Ansible Core in Ubuntu
 ```
 sudo apt update
