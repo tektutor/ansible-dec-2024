@@ -48,4 +48,8 @@
 - Inventory
   - is a plain text file which follows an INI style format
   - captures connectivity details, IP address/hostname, username, password, ssh-key's etc
+- comes in 3 flavours
+  1. Ansible core - open source variant supports only command line
+  2. AWX - supports webconsole, opensource, built on top of Ansible core
+  3. Red Hat Ansible Tower - enterprise commercial product, built on top of AWX 
 </pre>
