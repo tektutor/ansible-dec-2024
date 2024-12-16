@@ -89,3 +89,12 @@
 - you will world-wide support from Red Hat (an IBM company)
 - which means we need ansible core to develop/write playbook
 </pre>
+
+## Lab - Install Ansible Core in Ubuntu
+```
+sudo apt update
+sudo apt install -y ansible-core
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/d053e30e-303e-49df-9663-5e3d0a60991a)
