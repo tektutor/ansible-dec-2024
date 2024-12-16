@@ -1,5 +1,15 @@
 # Day 1
 
+## Pre-test url
+<pre>
+https://rpsconsulting116.examly.io/student  
+</pre>  
+
+## Feedback
+<pre>
+https://survey.zohopublic.com/zs/tZB2K7 
+</pre>  
+
 ## Configuration Management Tool Overview
 <pre>
 - is used to automate system administration activities
@@ -334,3 +344,24 @@ ansible-playbook -i inventory create-folder-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/1c062822-ccda-4229-b07d-fd7f38deb2a8)
 ![image](https://github.com/user-attachments/assets/d7ab4c5d-66fd-4228-abce-fd24bff34c8c)
+
+## Info - What happens behind the scene when we execute an ansible ad-hoc command
+<pre>
+- Ansible picks the connectivity details from inventory and it connects to the remote windows servers over winrm
+- Ansible create temporary directory the remote machine and copies the ansible module(powershell) from ACM to windows node
+- Executes the powershell script on the remote machine, captures the output of the powershell on the remote machine
+- Clean-up any temp folder that was created in this process
+- Gives a summary of output of the powershell execution
+</pre>
+
+## Info - What happens behind the scene when we execute an ansible playbook
+<pre>
+- Ansible playbook invokes one or more ansible modules in a particular sequence, hence the bunch of steps that we discussed in ad-hoc command is repeated for every single ansible module execution
+- Ansible picks the connectivity details from inventory and it connects to the remote windows servers over winrm
+- Ansible create temporary directory the remote machine and copies the ansible module(powershell) from ACM to windows node
+- Executes the powershell script on the remote machine, captures the output of the powershell on the remote machine
+- Clean-up any temp folder that was created in this process
+- Gives a summary of output of the powershell execution
+</pre>
+
+## Lab - 
