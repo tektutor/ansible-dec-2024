@@ -297,3 +297,20 @@ Expected output
 ![image](https://github.com/user-attachments/assets/5602f381-0b7f-4484-b1a9-b557d7f0521a)
 ![image](https://github.com/user-attachments/assets/e05532c6-b254-4403-a327-a0296fd93dac)
 ![image](https://github.com/user-attachments/assets/5f3416c5-5c9a-4603-a4db-3bc14f231593)
+
+## Lab - Writing your first playbook
+<pre>
+- name: This ansible playbook demonstrates pinging windows ansible nodes
+  hosts: all
+  tasks:
+  - name: Ping windows server
+    win_ping:  
+</pre>
+
+Running the ansible playbook
+```
+ansible-playbook -i inventory first-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/7121ddf5-db30-4251-97d2-5dd25e39ae57)
