@@ -1,6 +1,6 @@
 # Day 2
 
-## Info - Installing AWX in Ubuntu
+## Info - Installing AWX in Ubuntu ( Please don't do this in our lab environment - this is just for your reference )
 
 First, let's install minikube
 ```
