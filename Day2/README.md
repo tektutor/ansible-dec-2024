@@ -82,3 +82,13 @@ Expected output
 
 If everything went smooth, you are expected to see similar page
 ![image](https://github.com/user-attachments/assets/353bcbaa-e837-4d84-b851-69da778ffc82)
+
+## Lab - Installing 7zip software utility via ansible playbook
+```
+cd ~/ansible-dec-2023
+git pull
+cd Day2/ansible
+ansible-playbook -i inventory install-7zip-playbook.yml
+```
+
+Expected output
