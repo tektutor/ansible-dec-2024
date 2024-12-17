@@ -1,0 +1,7 @@
+- name: Copy folder from ansible controller machine to windows servers
+  hosts: windows
+  tasks:
+  - name: Copy folder to windows servers
+    win_copy: 
+      src: /tmp/myfolder  
+      dest: C:\

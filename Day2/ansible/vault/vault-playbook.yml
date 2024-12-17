@@ -1,0 +1,9 @@
+- name: This playbook demonstrates retrieving credentials from vault encrypted file
+  hosts: windows
+  vars_files:
+  - machine-credentials.yml
+
+  tasks:
+  - name: Retrieve credentials from ansible vault encrypted file
+    debug:
+      msg: "username: {{ansible_user}} password: {{ansible_password}}"

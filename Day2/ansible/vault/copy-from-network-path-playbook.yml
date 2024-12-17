@@ -1,0 +1,23 @@
+- name: This Playbook demonstrates copyfile files from network shared path
+  hosts: 192.168.122.55
+  vars_files:
+  - machine-credentials.yml
+  tasks:
+  - name: Map the shared folder to a drive
+    win_mapped_drive:
+      letter: E 
+      path: \\192.168.122.55\myfolder
+      state: present
+      username: "{{ansible_become_user}}"
+      password: "{{ansible_become_pass}}"
+    vars:
+      ansible_become: yes
+      ansible_become_method: runas
+      ansible_become_pass: "{{ ansible_become_password }}"
+
+  - name: copy file from shared path to local machine
+    win_copy:
+      src: E:\
+      dest: .
+      remote_src: true
+    become: yes

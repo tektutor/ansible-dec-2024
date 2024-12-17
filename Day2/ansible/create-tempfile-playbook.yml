@@ -1,0 +1,10 @@
+- name: demonstrates creating temp file
+  hosts: windows
+  gather_facts: false
+  tasks:
+  - name: Create a temp file
+    win_tempfile:
+      state: file
+      prefix: some
+      suffix: file
+
