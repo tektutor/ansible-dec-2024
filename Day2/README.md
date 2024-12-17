@@ -143,3 +143,14 @@ Expected output
 ![image](https://github.com/user-attachments/assets/1065a6f5-0246-46c8-86a5-15bd5fa4ac3a)
 ![image](https://github.com/user-attachments/assets/ae6d8531-1790-4849-b522-ca3f255f9586)
 ![image](https://github.com/user-attachments/assets/f3df58b8-6662-4f54-9038-5d8cef6a4bb3)
+
+## Lab - Refactoring the inventory to move the login credentials to a vault protected file
+```
+cat inventory
+ansible view machine-credentials.yml
+ansible windows -m win_ping --ask-vault-pass
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/74bed6c8-db53-4535-bd3d-f8105c73b638)
+![image](https://github.com/user-attachments/assets/ece6c634-c58b-4036-8dec-ddbfdf0bf00d)
