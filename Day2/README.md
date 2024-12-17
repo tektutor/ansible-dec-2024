@@ -120,6 +120,26 @@ Let's edit the machine-credentials.yml
 ansible-vault edit machine-credentials.yml
 ```
 
+Let's encrypt an existing file
+```
+cat vault-playbook.yml
+ansible-vault encrypt vault-playbook.yml
+cat vault-playbook.yml
+```
+
+Let's view the data from the encrypted playbook
+```
+ansible-vault view vault-playbook.yml
+```
+
+Let's decrypt the playbook
+```
+ansible-vault decrypt vault-playbook.yml
+```
+
 Expected output
 ![image](https://github.com/user-attachments/assets/4c66bdbd-ef01-44db-97f4-f0cff98404f4)
 ![image](https://github.com/user-attachments/assets/e8c986d8-1c93-45fb-9aa6-c20e02aca9f7)
+![image](https://github.com/user-attachments/assets/1065a6f5-0246-46c8-86a5-15bd5fa4ac3a)
+![image](https://github.com/user-attachments/assets/ae6d8531-1790-4849-b522-ca3f255f9586)
+![image](https://github.com/user-attachments/assets/f3df58b8-6662-4f54-9038-5d8cef6a4bb3)
