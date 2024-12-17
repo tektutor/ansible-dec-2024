@@ -200,3 +200,48 @@ Expected output
 ![image](https://github.com/user-attachments/assets/e268a2e4-13ff-47c7-9936-de4560b5b5a6)
 ![image](https://github.com/user-attachments/assets/b099acd2-1843-459f-afa7-651ab25fc2b4)
 ![image](https://github.com/user-attachments/assets/1362b71e-d762-44e4-850e-2ca2ae50afd1)
+
+## Lab - Rebooting windows node and waiting until becomes ready for further configuration management
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook wait-for-windows-machine-ready-state-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/553479a5-a710-4f68-ba99-5ea62c5d5151)
+![image](https://github.com/user-attachments/assets/cbfef43c-d858-4f61-b9ba-a49754d857e6)
+
+## Lab - Enable firewall in all profiles
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook enable-firewall-playbook.yml
+```
+
+## Lab - Disable firewall in all profiles
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook disable-firewall-playbook.yml
+```
+
+## Lab - Add firewall rule to allow ICMP ping
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook allow-icmp-ping-playbook.yml
+```
+
+## Lab - Remove firewall rule to deny ICMP ping
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook deny-icmp-ping-playbook.yml
+```
+
