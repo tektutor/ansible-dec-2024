@@ -95,3 +95,31 @@ Expected output
 ![image](https://github.com/user-attachments/assets/583ff4b1-f224-40ff-ba1f-1db43651f4fc)
 ![image](https://github.com/user-attachments/assets/f9cff51d-ccda-4b56-8d0f-d2dfe09c0523)
 
+## Lab - Ansible vault
+<pre>
+- ansible-vault is a tool that can be used to create a text file with sensitive data  
+- the data stored in the file will be encrypted by ansible-vault tool with AES 256 bit algorithm
+- playbook can retrieve the sensitive data at runtime from the vault protected file securely
+- this helps us avoid hard-coding sensitive information like login credentials, certs, etc
+</pre>
+
+Let's store some credentials in a vault encrypted file as shown below, when prompts for password I gave rps@123 as the password
+```
+ansible-vault create machine-credentials.yml
+ls -l machine-credentials.yml
+cat machine-credentials.yml
+```
+
+Let's view the machine-credentials.yml data
+```
+ansible-vault view machine-credentials.yml
+```
+
+Let's edit the machine-credentials.yml
+```
+ansible-vault edit machine-credentials.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4c66bdbd-ef01-44db-97f4-f0cff98404f4)
+![image](https://github.com/user-attachments/assets/e8c986d8-1c93-45fb-9aa6-c20e02aca9f7)
