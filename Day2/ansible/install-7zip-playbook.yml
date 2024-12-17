@@ -1,0 +1,21 @@
+- name: Playbook to install 7zip
+  hosts: windows
+  tasks:
+  - name: Download 7zip installer
+    win_get_url:
+      url: https://7-zip.org/a/7z2409-x64.exe
+      dest: C:\7zip.exe
+
+  - name: Install 7zip
+    win_package:
+      path: C:\7zip.exe
+      product_id: 7-zip
+      arguments: /S
+      state: present
+    become: true
+    become_method: runas
+    vars:
+      ansible_become_user: Administrator
+      ansible_become_password: tek@123
+
+
