@@ -92,3 +92,6 @@ ansible-playbook -i inventory install-7zip-playbook.yml
 ```
 
 Expected output
+![image](https://github.com/user-attachments/assets/583ff4b1-f224-40ff-ba1f-1db43651f4fc)
+![image](https://github.com/user-attachments/assets/f9cff51d-ccda-4b56-8d0f-d2dfe09c0523)
+
