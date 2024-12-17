@@ -212,3 +212,36 @@ ansible-playbook wait-for-windows-machine-ready-state-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/553479a5-a710-4f68-ba99-5ea62c5d5151)
 ![image](https://github.com/user-attachments/assets/cbfef43c-d858-4f61-b9ba-a49754d857e6)
+
+## Lab - Enable firewall in all profiles
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook enable-firewall-playbook.yml
+```
+
+## Lab - Disable firewall in all profiles
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook disable-firewall-playbook.yml
+```
+
+## Lab - Add firewall rule to allow ICMP ping
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook allow-icmp-ping-playbook.yml
+```
+
+## Lab - Remove firewall rule to deny ICMP ping
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day2/ansible
+ansible-playbook deny-icmp-ping-playbook.yml
+```
+
