@@ -154,3 +154,19 @@ ansible windows -m win_ping --ask-vault-pass
 Expected output
 ![image](https://github.com/user-attachments/assets/74bed6c8-db53-4535-bd3d-f8105c73b638)
 ![image](https://github.com/user-attachments/assets/ece6c634-c58b-4036-8dec-ddbfdf0bf00d)
+
+## Lab - Retrieving machine credentials from vault protected file and using it in playbook
+My vault password is rps@123
+
+```
+cat inventory
+ansible-vault view machine-credentials.yml
+cat vault-playbook.yml
+cat ansible.cfg
+ansible-playbook vault-playbook.yml --ask-vault-pass
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/940662f1-d2b2-4dc5-9395-239d6fba2ebf)
+![image](https://github.com/user-attachments/assets/b16af7cf-27af-4427-8f34-b905699c549e)
+![image](https://github.com/user-attachments/assets/712b9558-4c1a-4222-a664-cddeded24a48)
