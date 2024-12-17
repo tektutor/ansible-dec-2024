@@ -1,0 +1,16 @@
+- name: Demonstrates denying ping to windows servers
+  hosts: windows
+  tasks:
+  - name: Firewall rule to deny ICMP ping
+    community.windows.win_firewall_rule:
+      name: ICMP Allow incoming V4 echo request
+      enabled: yes
+      state: absent 
+      profiles: 
+      - private
+      - public
+      - domain 
+      action: allow 
+      direction: in
+      protocol: icmpv4
+

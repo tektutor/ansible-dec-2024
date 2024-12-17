@@ -1,0 +1,10 @@
+- name: Playbook demonstrates disabling firewall on windows servers
+  hosts: windows
+  tasks:
+  - name: Disable firewall
+    win_firewall:
+      state: disabled
+      profiles:
+      - Domain
+      - Private
+      - Public
