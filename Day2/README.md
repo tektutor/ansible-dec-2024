@@ -82,3 +82,102 @@ Expected output
 
 If everything went smooth, you are expected to see similar page
 ![image](https://github.com/user-attachments/assets/353bcbaa-e837-4d84-b851-69da778ffc82)
+
+## Lab - Installing 7zip software utility via ansible playbook
+```
+cd ~/ansible-dec-2023
+git pull
+cd Day2/ansible
+ansible-playbook -i inventory install-7zip-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/583ff4b1-f224-40ff-ba1f-1db43651f4fc)
+![image](https://github.com/user-attachments/assets/f9cff51d-ccda-4b56-8d0f-d2dfe09c0523)
+
+## Lab - Ansible vault
+<pre>
+- ansible-vault is a tool that can be used to create a text file with sensitive data  
+- the data stored in the file will be encrypted by ansible-vault tool with AES 256 bit algorithm
+- playbook can retrieve the sensitive data at runtime from the vault protected file securely
+- this helps us avoid hard-coding sensitive information like login credentials, certs, etc
+</pre>
+
+Let's store some credentials in a vault encrypted file as shown below, when prompts for password I gave rps@123 as the password
+```
+ansible-vault create machine-credentials.yml
+ls -l machine-credentials.yml
+cat machine-credentials.yml
+```
+
+Let's view the machine-credentials.yml data
+```
+ansible-vault view machine-credentials.yml
+```
+
+Let's edit the machine-credentials.yml
+```
+ansible-vault edit machine-credentials.yml
+```
+
+Let's encrypt an existing file
+```
+cat vault-playbook.yml
+ansible-vault encrypt vault-playbook.yml
+cat vault-playbook.yml
+```
+
+Let's view the data from the encrypted playbook
+```
+ansible-vault view vault-playbook.yml
+```
+
+Let's decrypt the playbook
+```
+ansible-vault decrypt vault-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/4c66bdbd-ef01-44db-97f4-f0cff98404f4)
+![image](https://github.com/user-attachments/assets/e8c986d8-1c93-45fb-9aa6-c20e02aca9f7)
+![image](https://github.com/user-attachments/assets/1065a6f5-0246-46c8-86a5-15bd5fa4ac3a)
+![image](https://github.com/user-attachments/assets/ae6d8531-1790-4849-b522-ca3f255f9586)
+![image](https://github.com/user-attachments/assets/f3df58b8-6662-4f54-9038-5d8cef6a4bb3)
+
+## Lab - Refactoring the inventory to move the login credentials to a vault protected file
+```
+cat inventory
+ansible view machine-credentials.yml
+ansible windows -m win_ping --ask-vault-pass
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/74bed6c8-db53-4535-bd3d-f8105c73b638)
+![image](https://github.com/user-attachments/assets/ece6c634-c58b-4036-8dec-ddbfdf0bf00d)
+
+## Lab - Retrieving machine credentials from vault protected file and using it in playbook
+My vault password is rps@123
+
+```
+cat inventory
+ansible-vault view machine-credentials.yml
+cat vault-playbook.yml
+cat ansible.cfg
+ansible-playbook vault-playbook.yml --ask-vault-pass
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/940662f1-d2b2-4dc5-9395-239d6fba2ebf)
+![image](https://github.com/user-attachments/assets/b16af7cf-27af-4427-8f34-b905699c549e)
+![image](https://github.com/user-attachments/assets/712b9558-4c1a-4222-a664-cddeded24a48)
+
+## Lab - Invoking win_ping ansible module via ad-hoc command without hard coded login credentials
+```
+cat ansible.cfg
+cat inventory
+cat ~/.my-vault-password
+ansible windows -m win_ping -e @machine-credentials.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/43345098-5cc9-4f67-8589-00f074416cbb)
