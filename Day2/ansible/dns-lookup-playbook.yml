@@ -1,0 +1,8 @@
+- name: Demonstrates dns lookup
+  hosts: windows
+  tasks:
+  - name: DNS Lookup check
+    win_shell: nslookup www.abctest3543.com
+    register: output
+
+  - debug: var=output

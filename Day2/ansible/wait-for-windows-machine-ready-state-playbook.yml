@@ -1,0 +1,23 @@
+- name: Demonstrates how to wait until a windows servers boots and ready to server
+  hosts: windows 
+  vars:
+    windows_servers:
+    - "192.168.122.55"
+    - "192.168.122.117"
+
+  tasks:
+  - name: Reboot a windows machine
+    win_reboot:
+
+  - name: Wait for Windows machine
+    wait_for:
+      host: "{{item}}"
+      port: "5986"
+      delay: 15
+      state: started
+    with_items: "{{windows_servers}}"
+    delegate_to: localhost 
+
+  - debug: msg="windows server is up and running !"
+    delegate_to: localhost
+      

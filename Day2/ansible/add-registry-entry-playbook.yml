@@ -1,0 +1,8 @@
+- name: This playbook demonstrates adding registry entries to remote windows server
+  hosts: windows
+  tasks:
+  - name: Add or update registry path MyCompany, with entry 'hello', and containing 'world'
+    ansible.windows.win_regedit:
+      path: HKCU:\Software\MyCompany
+      name: hello
+      data: world
