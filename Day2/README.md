@@ -193,3 +193,9 @@ Expected output
 ![image](https://github.com/user-attachments/assets/11b3c5fd-e207-42f0-b340-ef2e2ca30562)
 ![image](https://github.com/user-attachments/assets/c0a09771-20e8-48fb-ac3d-7f4b33d4a649)
 ![image](https://github.com/user-attachments/assets/debb4e89-d83d-4259-aac7-37f532ab8cba)
+
+## Lab - Creating a Job Template to invoke an ansible playbook
+![image](https://github.com/user-attachments/assets/764cd200-1f38-4f56-84b4-6e6067a61fce)
+![image](https://github.com/user-attachments/assets/4661bcc2-7b19-4238-90b0-2e795ab075a3)
+![image](https://github.com/user-attachments/assets/e268a2e4-13ff-47c7-9936-de4560b5b5a6)
+![image](https://github.com/user-attachments/assets/b099acd2-1843-459f-afa7-651ab25fc2b4)
