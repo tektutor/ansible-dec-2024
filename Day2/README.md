@@ -53,6 +53,7 @@ kubectl logs -f deployments/awx-operator-controller-manager -c awx-manager -n an
 Expected output
 ![image](https://github.com/user-attachments/assets/97929864-4d17-490f-8531-0955ac569bef)
 ![image](https://github.com/user-attachments/assets/0a849d40-309e-4199-b33c-03a09e4b32cc)
+![image](https://github.com/user-attachments/assets/5ee43576-026f-4878-b2e7-264aa3f7cf1b)
 
 Access the AWX dashboard
 ```
