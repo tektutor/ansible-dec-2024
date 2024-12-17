@@ -1,0 +1,12 @@
+- name: This playbook demonstrates creating a folder and placing a file onto that folder
+  hosts: all
+  tasks:
+  - name: Create folder
+    win_file:
+      path: C:\myfolder
+      state: directory
+
+  - name: Copy a file
+    win_copy:
+      src: myfile.txt
+      dest: C:\myfolder\myfile.txt

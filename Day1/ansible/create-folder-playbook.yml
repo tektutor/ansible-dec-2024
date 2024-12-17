@@ -1,0 +1,7 @@
+- name: Create a folder in windows ansible node
+  hosts: all
+  tasks:
+  - name: Create directory
+    win_file:
+      path: C:\Ansible
+      state: directory
