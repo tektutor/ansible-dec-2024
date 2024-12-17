@@ -170,3 +170,14 @@ Expected output
 ![image](https://github.com/user-attachments/assets/940662f1-d2b2-4dc5-9395-239d6fba2ebf)
 ![image](https://github.com/user-attachments/assets/b16af7cf-27af-4427-8f34-b905699c549e)
 ![image](https://github.com/user-attachments/assets/712b9558-4c1a-4222-a664-cddeded24a48)
+
+## Lab - Invoking win_ping ansible module via ad-hoc command without hard coded login credentials
+```
+cat ansible.cfg
+cat inventory
+cat ~/.my-vault-password
+ansible windows -m win_ping -e @machine-credentials.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/43345098-5cc9-4f67-8589-00f074416cbb)
