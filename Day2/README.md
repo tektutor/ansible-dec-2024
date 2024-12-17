@@ -181,3 +181,22 @@ ansible windows -m win_ping -e @machine-credentials.yml
 
 Expected output
 ![image](https://github.com/user-attachments/assets/43345098-5cc9-4f67-8589-00f074416cbb)
+
+## Lab - Creating an Inventory in Ansible Automation Platform
+![image](https://github.com/user-attachments/assets/03e7f4c4-85d2-41d9-9260-ca6f94163972)
+![image](https://github.com/user-attachments/assets/51901122-d710-499e-b962-b5bf0c97b075)
+![image](https://github.com/user-attachments/assets/3e53d503-07a3-4b32-a439-54090d00f421)
+![image](https://github.com/user-attachments/assets/3d4dce65-4868-4683-9630-cda9c8644ad4)
+
+
+## Lab - Creating a project in Ansible Automation Platform ( formerly Ansible Tower )
+![image](https://github.com/user-attachments/assets/11b3c5fd-e207-42f0-b340-ef2e2ca30562)
+![image](https://github.com/user-attachments/assets/c0a09771-20e8-48fb-ac3d-7f4b33d4a649)
+![image](https://github.com/user-attachments/assets/debb4e89-d83d-4259-aac7-37f532ab8cba)
+
+## Lab - Creating a Job Template to invoke an ansible playbook
+![image](https://github.com/user-attachments/assets/764cd200-1f38-4f56-84b4-6e6067a61fce)
+![image](https://github.com/user-attachments/assets/4661bcc2-7b19-4238-90b0-2e795ab075a3)
+![image](https://github.com/user-attachments/assets/e268a2e4-13ff-47c7-9936-de4560b5b5a6)
+![image](https://github.com/user-attachments/assets/b099acd2-1843-459f-afa7-651ab25fc2b4)
+![image](https://github.com/user-attachments/assets/1362b71e-d762-44e4-850e-2ca2ae50afd1)
