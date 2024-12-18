@@ -85,6 +85,16 @@ Expected output
 If everything went smooth, you are expected to see similar page
 ![image](https://github.com/user-attachments/assets/353bcbaa-e837-4d84-b851-69da778ffc82)
 
+To access the awx dashboard from other machines, you need to do port-forwarding
+```
+kubectl port-forward service/awx-ubuntu-service -n ansible-awx --address 0.0.0.0 10445:80 &> /dev/null &
+```
+
+You may now access the dashboard from other machines as
+```
+http://10.0.1.72:10445
+```
+
 ## Lab - Installing 7zip software utility via ansible playbook
 ```
 cd ~/ansible-dec-2023
