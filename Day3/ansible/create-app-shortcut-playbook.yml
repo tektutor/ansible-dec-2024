@@ -1,0 +1,24 @@
+- name: Manage appliction shortcuts
+  hosts: windows
+  vars_files:
+  - machine-credentials.yml
+  tasks:
+  - name: Create a shortcut for Notepad
+    community.windows.win_shortcut:
+      dest: "{{ ansible_env.USERPROFILE }}\\Desktop\\Notepad.lnk"
+      src: "C:\\Windows\\System32\\notepad.exe"
+      description: "Notepad shortcut"
+      arguments: ""
+      state: present
+    become: yes
+    become_method: runas
+
+  - name: Update a shortcut for Notepad
+    community.windows.win_shortcut:
+      dest: "{{ ansible_env.USERPROFILE }}\\Desktop\\Notepad.lnk"
+      src: "C:\\Windows\\System32\\notepad.exe"
+      description: "Shortcut to Notepad (Updated)"
+      arguments: ""
+      state: present
+    become: yes
+    become_method: runas
