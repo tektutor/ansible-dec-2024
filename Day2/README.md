@@ -57,7 +57,9 @@ Expected output
 
 Access the AWX dashboard
 ```
-kubectl get nodes
+cp awx-demo.yml awx-ubuntu.yml
+kubectl create -f awx-ubuntu.yml -n ansible-awx
+kubectl get pods -n ansible-awx
 kubectl get svc -n ansible-awx
 minikube service awx-ubuntu-service --url -n ansible-awx
 ```
