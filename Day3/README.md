@@ -81,3 +81,15 @@ ansible-playbook consume-data-from-powershell-output-and-print-it.yml
 
 Expected output
 ![image](https://github.com/user-attachments/assets/8b23b411-51e2-4fdc-900c-0662347ca423)
+
+## Lab - Invoking the powershell script from playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook invoke-powershell-from-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/58745e15-303d-4934-bc52-58bf0e269804)
+![image](https://github.com/user-attachments/assets/22a6f05b-6fb3-45ff-9e22-19bf5d5ad621)
