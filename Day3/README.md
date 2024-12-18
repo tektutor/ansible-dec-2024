@@ -95,3 +95,15 @@ Expected output
 ![image](https://github.com/user-attachments/assets/22a6f05b-6fb3-45ff-9e22-19bf5d5ad621)
 ![image](https://github.com/user-attachments/assets/d4d986f0-43ab-4629-88a1-daa642e25e2d)
 ![image](https://github.com/user-attachments/assets/23b59c2b-cdbc-4a81-b580-1139debd00e1)
+
+## Lab - Installing IIS Server from ansible playbook using win_feature module
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook install-iis-server-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/1382e08c-b494-46de-860c-7c2c30d204b3)
+![image](https://github.com/user-attachments/assets/cdc95da9-bbc7-4cd7-9f76-1373c9267374)
