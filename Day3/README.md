@@ -49,3 +49,35 @@ Expected output
 ![image](https://github.com/user-attachments/assets/07a4acb1-fab3-4a02-ada7-131fac7dc8e7)
 ![image](https://github.com/user-attachments/assets/c953e0b1-8caf-4e5b-bb34-9f095721429d)
 
+## Lab - Managing windows service via playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook manage-windows-service-playbook.yml
+```
+Expected output
+![image](https://github.com/user-attachments/assets/ed555751-f838-43b1-a52e-5c74a2a33767)
+![image](https://github.com/user-attachments/assets/21f110ff-a7b4-4a69-9593-0253c0e1bcd0)
+![image](https://github.com/user-attachments/assets/a45de68b-f167-403f-82a5-44d2879467bd)
+
+## Lab - Installing hotfix and rebooting the server via playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook hotfix-playbook.yml
+```
+Expected output
+![image](https://github.com/user-attachments/assets/cffa1973-a870-4d43-b3ff-d2584550e9ae)
+
+## Lab - Capturing powershell output and using the response of powershell in playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook consume-data-from-powershell-output-and-print-it.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8b23b411-51e2-4fdc-900c-0662347ca423)
