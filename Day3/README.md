@@ -107,3 +107,15 @@ ansible-playbook install-iis-server-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/1382e08c-b494-46de-860c-7c2c30d204b3)
 ![image](https://github.com/user-attachments/assets/cdc95da9-bbc7-4cd7-9f76-1373c9267374)
+
+## Lab - Creating application shortcuts using ansible playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook create-app-shortcut-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/6e691b97-c9c7-4a25-bcf1-eae931e4345b)
+![image](https://github.com/user-attachments/assets/8aa82ffa-a07c-4fb3-8c92-0c4e442fc33c)
