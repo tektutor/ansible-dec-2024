@@ -1,0 +1,11 @@
+- name: Demonstrate consuming data from powershell output
+  hosts: windows
+  gather_facts: no
+  tasks:
+  - name: Run powershell
+    win_shell: |
+      Get-ComputerInfo | Select-Object -Property CsName, OsArchitecture, WindowsVersion, WindowsBuildLabEx
+    register: ps_output
+
+  - debug:
+      msg: "Powershell output: {{ ps_output.stdout }}"

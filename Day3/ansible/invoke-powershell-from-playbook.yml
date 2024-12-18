@@ -1,0 +1,17 @@
+- name: Invoke powershell script from playbook
+  hosts: windows
+  tasks:
+  - name: Copy powershell to windows server
+    win_copy:
+      src: ./script.ps1
+      dest: C:\script.ps1
+
+  - name: Execute the powershell script
+    win_shell: |
+      powershell.exe -ExecutionPolicy Bypass -File "C:\script.ps1"
+    args:
+      executable: cmd
+    register: script_output
+
+  - name: Print the output of the script
+    debug: var=script_output.stdout

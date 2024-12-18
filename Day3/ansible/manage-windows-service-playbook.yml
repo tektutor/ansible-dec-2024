@@ -1,0 +1,36 @@
+- name: Demonstrates managing windows services via playbook
+  hosts: windows
+  tasks:
+  - name: Ensure a service is running
+    win_service:
+      name: Spooler
+      state: started
+
+  - name: Stop a service
+    win_service:
+      name: W32Time
+      state: stopped
+
+  - name: Restart a service
+    win_service:
+      name: W32Time
+      state: restarted
+
+  - name: Ensure a service is enabled
+    win_service:
+      name: WSearch
+      start_mode: delayed 
+
+  - name: Disable a Service
+    win_service:
+      name: WSearch
+      start_mode: disabled
+
+  - name: Retrieve service status
+    ansible.windows.win_service_info:
+      name: Spooler 
+    register: spooler_status
+
+  - name: Display spooler service status
+    debug:
+      msg: "Spooler service status : {{ spooler_status }}"        

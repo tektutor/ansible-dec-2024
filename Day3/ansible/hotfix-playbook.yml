@@ -1,0 +1,29 @@
+- name: Demonstrates installing a hotfix and reboot the windows server
+  hosts: 192.168.122.117 
+  tasks:
+  - name: Download th hotfix file
+    win_shell: |
+      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+      Invoke-WebRequest -Uri "https://catalog.s.download.windowsupdate.com/d/msdownload/update/software/uprl/2024/08/windows-kb890830-x64-v5.127_acb38d66466232b6ab1697b29d3561deb1f9fefd.exe" -OutFile "C:\hotfix.msu"
+
+  - name: Install a hotfix
+    win_hotfix:
+      name: "KB5048671"
+      source: C:\hotfix.msu 
+      state: present
+    register: hotfix_result
+
+  - name: Check if reboot is required
+    set_fact:
+      reboot_required: "{{ hotfix_result.reboot_required }}"
+
+  - name: Reboot the server if required
+    win_reboot:
+      reboot_timeout: 600
+      test_command: "powershell.exe Get_process"
+    when: reboot_required | bool
+    register: reboot_status
+
+  - name: Display reboot status
+    debug:
+      msg: "Reboot was required: {{ reboot_status }}"
