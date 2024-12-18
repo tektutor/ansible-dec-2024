@@ -1,0 +1,31 @@
+- name: Manage Windows Security Policies
+  hosts: windows
+  tasks:
+  - name: Configure Account Lockout policy
+    win_shell: |
+      SecEdit.exe /export /cfg C:\secpol.cfg
+      (Get-Content C:\secpol.cfg).Replace("LockoutBadCount = 0", "LockoutBadCount = 5") |
+         Set-Content C:\secpol.cfg
+      SecEdit.exe /configure /db C:\Windows\Security\Database=secedit.sdb /cfg C:\secpol.cfg /quiet
+      Remove-Item C:\secpol.cfg -Force
+
+  - name: Configure Audit Policy
+    win_shell: |
+      auditpol /set /subcategory:"Logon" /success:enable /failure:enable
+
+  - name: Enable Password complexity
+    win_shell: |
+      SecEdit.exe /export /cfg C:\secpol.cfg
+      (Get-Content C:\secpol.cfg).Replace("PasswordComplexity = 0", "PasswordComplexity = 1") |
+         Set-Content C:\secpol.cfg
+      SetEdit.exe /configure /db C:\Windows\Security\Database\secedit.sdb /cfg C:\secpol.cfg /quiet
+      Remove-Item C:\secpol.cfg -Force
+
+  - name: Display Audit Policy
+    win_shell: |
+      auditpol /get /category:"Logon/Logoff"
+    register: audit_policy_output
+
+  - name: Show audit policy configuration
+    debug:
+      msg: "{{ audit_policy_output.stdout }}"

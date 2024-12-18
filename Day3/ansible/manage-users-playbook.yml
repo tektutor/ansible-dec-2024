@@ -1,0 +1,37 @@
+- name: This playbook demonstrates managing windows users
+  hosts: windows
+  tasks:
+  - name: Create a new user
+    win_user:
+      name: "nelson.mandela"
+      password: "rps@123"
+      description: "Standard User Account"
+      state: present
+      groups:
+      - "Users"
+      password_expired: no
+
+  - name: Update User Description
+    win_user:
+      name: "nelson.mandela"
+      description: "Updated Description for Nelson Mandela"
+      state: present
+
+  - name: Remove a User
+    win_user:
+      name: "unwanted.user"
+      state: absent
+
+  - name: Ensure the user is part of Administrators group
+    win_group_membership:
+      name: "Administrators"
+      members: 
+      - "nelson.mandela"
+      state: present
+
+  - name: Remove User from a group
+    win_group_membership:
+      name: "Remote Desktop Users"
+      members:
+      - "nelson.mandela"
+      state: absent

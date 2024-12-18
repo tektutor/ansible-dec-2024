@@ -1,0 +1,11 @@
+[windows]
+192.168.122.55 ansible_host=192.168.122.55
+192.168.122.117 ansible_host=192.168.122.117
+
+[windows:vars]
+ansible_user=Administrator
+ansible_password=tek@123
+ansible_ssh_port=5986
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore

@@ -1,0 +1,49 @@
+- name: Manage security audit rules for files and folders
+  hosts: windows
+  tasks:
+  - name: Create a folder for audit
+    win_file:
+      path: C:\AuditFolder
+      state: directory
+
+  - name: Set Audit Policy on the folder
+    win_shell: |
+      $AuditPath = "C:\AuditFolder"
+      $AuditRule = New-Object System.Security.AccessControl.FileSystemAuditRule(
+          "Administrators",
+          "Read, Write",
+          "None",
+          "None",
+          "Success, Failure"
+      )
+      $Acl = Get-Acl $AuditPath
+      $Acl.SetAuditRule($AuditRule)
+      Set-Acl -Path $AuditPath -AclObject $Acl
+
+  - name: Create a file in the folder
+    win_file:
+      path: C:\AuditFolder\test.txt
+      state: touch
+
+  - name: Set Audit Policy on the file
+    win_shell: |
+      $FilePath = "C:\AuditFolder\test.txt"
+      $AuditRule = New-Object System.Security.AccessControl.FileSystemAuditRule(
+         "Everyone",
+         "Read, Write",
+         "None",
+         "None",
+         "Success, Failure"
+      )
+      $Acl = Get-Acl $FilePath
+      $Acl.SetAuditRule($AuditRule)
+      Set-Acl -Path $FilePath -AclObject $Acl
+
+  - name: Verify Audit Rules on the folder
+    win_shell: |
+      Get-Acl -Path "C:\AuditFolder" | Format-List
+    register: folder_audit_output
+
+  - name: Display Audit Rules for the folder
+    debug:
+      msg: "{{ folder_audit_output.stdout }}"

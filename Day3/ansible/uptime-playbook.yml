@@ -1,0 +1,16 @@
+- name: Playbook to check windows server uptime
+  hosts: windows
+  tasks:
+  - name: Get System uptime
+    win_shell: |
+      $LastBoot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime
+      $Uptime   = (Get-Date) - $LastBoot
+      $Days = [math]::Floor($Uptime.TotalDays)
+      $Hours = $Uptime.Hours
+      $Minutes = $Uptime.Minutes
+      $Seconds = $Uptime.Seconds
+      "System Uptime: $Days days, $Hours hours, $Minutes minutes, $Seconds seconds"
+    register: uptime_result
+
+  - debug: 
+      msg: "{{ uptime_result.stdout }}"
