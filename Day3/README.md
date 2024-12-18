@@ -10,6 +10,17 @@ https://survey.zohopublic.com/zs/ThCnlG
 https://rpsconsulting116.examly.io/student    
 </pre>
 
+## Accessing AWX - Ansible Tower from RPS Ubuntu Lab machine from web browser
+```
+http://10.0.1.72:10445
+```
+Login Credentials
+<pre>
+username - admin
+password - hteuUVFNvfYMNeo6SDhb2kj22G4xgncr
+</pre>
+
+
 ## Lab - Playbook that prints the uptime of windows servers
 ```
 cd ~/ansible-dec-2024
