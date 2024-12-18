@@ -119,3 +119,15 @@ ansible-playbook create-app-shortcut-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/6e691b97-c9c7-4a25-bcf1-eae931e4345b)
 ![image](https://github.com/user-attachments/assets/8aa82ffa-a07c-4fb3-8c92-0c4e442fc33c)
+
+## Lab - Manage windows user rights from an ansible playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook manage-user-rights-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8043a16e-0896-41e9-9dc8-6e439dc05bec)
+![image](https://github.com/user-attachments/assets/c9357e2b-5433-48cc-b0a7-1fc666994b34)
