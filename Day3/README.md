@@ -93,3 +93,5 @@ ansible-playbook invoke-powershell-from-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/58745e15-303d-4934-bc52-58bf0e269804)
 ![image](https://github.com/user-attachments/assets/22a6f05b-6fb3-45ff-9e22-19bf5d5ad621)
+![image](https://github.com/user-attachments/assets/d4d986f0-43ab-4629-88a1-daa642e25e2d)
+![image](https://github.com/user-attachments/assets/23b59c2b-cdbc-4a81-b580-1139debd00e1)
