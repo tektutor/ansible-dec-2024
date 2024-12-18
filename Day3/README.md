@@ -10,7 +10,7 @@ https://survey.zohopublic.com/zs/ThCnlG
 https://rpsconsulting116.examly.io/student    
 </pre>
 
-## Accessing AWX - Ansible Tower from RPS Ubuntu Lab machine from web browser
+## Accessing AWX - Ansible Tower from RPS Ubuntu Lab machine web browser
 ```
 http://10.0.1.72:10445
 ```
