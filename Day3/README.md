@@ -61,3 +61,23 @@ Expected output
 ![image](https://github.com/user-attachments/assets/21f110ff-a7b4-4a69-9593-0253c0e1bcd0)
 ![image](https://github.com/user-attachments/assets/a45de68b-f167-403f-82a5-44d2879467bd)
 
+## Lab - Installing hotfix and rebooting the server via playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook hotfix-playbook.yml
+```
+Expected output
+![image](https://github.com/user-attachments/assets/cffa1973-a870-4d43-b3ff-d2584550e9ae)
+
+## Lab - Capturing powershell output and using the response of powershell in playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook consume-data-from-powershell-output-and-print-it.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8b23b411-51e2-4fdc-900c-0662347ca423)
