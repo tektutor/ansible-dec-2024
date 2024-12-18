@@ -1,0 +1,22 @@
+- name: Install IIS Server on Windows Servers
+  hosts: windows
+  tasks:
+  - name: Install IIS server
+    win_feature:
+      name: Web-Server
+      state: present
+      include_sub_features: true
+      restart: yes
+
+  - name: Ensure IIS Service is running
+    win_service:
+      name: W3SVC
+      state: started
+
+  - name: Display IIS install status
+    win_shell: |
+      Get-WindowsFeature -Name Web-Server
+    register: iis_status
+
+  - debug: 
+      msg: "{{ iis_status.stdout }}"
