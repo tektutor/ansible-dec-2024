@@ -1,0 +1,42 @@
+- name: Download file from windows shared folder
+  hosts: 192.168.122.117 
+  vars:
+  - shared_server: "192.168.122.55"
+  vars_files:
+  - machine-credentials.yml
+
+  tasks:
+  - name: Copy the batch file to windows server
+    win_copy:
+      src: map.bat
+      dest: C:\map.bat
+
+  - name: Map network drive to access shared folder
+    win_dsc:
+      resource_name: MSFT_xPSdrive
+      Name: Z
+      PSProvider: FileSystem
+      Root: '\\{{shared_server}}\myfolder'
+      Persist: yes
+#    win_shell: |
+#      C:\map.bat 
+#    register: output
+
+  - name: check if network drive is mapped successfully
+    debug: var=output
+
+  - name: Copy file from shared folder to local path
+    win_shell: |
+      Copy-Item -Path "Z:\test.txt" -Destination "C:\\Users\\Administrator\\Desktop" -Force
+    args:
+      executable: powershell
+#    become: yes
+#    become_method: runas
+#    become_ansible_user: Administrator
+#    become_ansible_password: tek@123
+
+        #  - name: Unmap network drive
+        #    win_shell: |
+        #net user Z: /delete /yes
+        #args:
+        #executable: cmd

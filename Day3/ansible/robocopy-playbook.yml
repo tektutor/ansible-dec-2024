@@ -1,0 +1,20 @@
+- name: Synchronize directories using robocopy
+  hosts: 192.168.122.117 
+  tasks:
+  - name: Synchronise source and destination directories
+    win_robocopy:
+      src: "C:\\folder1"
+      dest: "C:\\folder2"
+      options: "/XX /E /COPYALL"
+    register: output
+
+  - debug: var=output
+
+  - name: Synchronise source and destination directories
+    win_robocopy:
+      src: "C:\\folder2"
+      dest: "C:\\folder1"
+      options: "/XX /E /COPYALL"
+    register: output
+
+  - debug: var=output
