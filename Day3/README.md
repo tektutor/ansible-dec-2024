@@ -1,5 +1,15 @@
 # Day 3
 
+## Training feedback link
+<pre>
+https://survey.zohopublic.com/zs/ThCnlG   
+</pre>
+
+## Post test link
+<pre>
+https://rpsconsulting116.examly.io/student    
+</pre>
+
 ## Lab - Playbook that prints the uptime of windows servers
 ```
 cd ~/ansible-dec-2024
