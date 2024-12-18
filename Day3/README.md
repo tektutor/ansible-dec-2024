@@ -119,3 +119,40 @@ ansible-playbook create-app-shortcut-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/6e691b97-c9c7-4a25-bcf1-eae931e4345b)
 ![image](https://github.com/user-attachments/assets/8aa82ffa-a07c-4fb3-8c92-0c4e442fc33c)
+
+## Lab - Manage windows user rights from an ansible playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook manage-user-rights-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/8043a16e-0896-41e9-9dc8-6e439dc05bec)
+![image](https://github.com/user-attachments/assets/c9357e2b-5433-48cc-b0a7-1fc666994b34)
+
+## Lab - Managing windows regional setting from an ansible playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook manage-regional-settings-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/955f9f61-8bc4-4cf0-90c7-968ff19b1557)
+![image](https://github.com/user-attachments/assets/e04c6276-34b8-4180-88fc-18201e2592ab)
+![image](https://github.com/user-attachments/assets/2b3ef9df-f911-4a53-a820-9bb367a860ef)
+
+## Lab - Managing windows shared folder 
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook manage-windows-shared-folders-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/29d76ee5-7b60-4fcc-8268-ed57b5e48ee6)
+![image](https://github.com/user-attachments/assets/c58f6b25-a72d-4635-85a7-88834e191f1b)
