@@ -1,0 +1,21 @@
+- name: Demonstrates managing regional settings
+  hosts: windows
+  tasks:
+  - name: Set system locale to English (United States)
+    win_region:
+      format: en-US
+    register: system_locale
+
+  - debug: var=system_locale
+
+  - name: Set time zone to EST
+    win_timezone:
+      timezone: "Eastern Standard Time"
+    register: timezone
+
+  - debug: var=timezone
+
+
+
+
+

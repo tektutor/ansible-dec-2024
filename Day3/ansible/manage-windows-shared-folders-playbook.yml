@@ -1,0 +1,17 @@
+- name: Manage windows shared folders
+  hosts: windows
+  tasks:
+  - name: Create a folder to share
+    win_file:
+      path: C:\SomeSharedFolder
+      state: directory
+
+  - name: Share a windows folder
+    win_share:
+      name: SharedFolder
+      path: C:\SomeSharedFolder
+      description: "Shared folder for my team"
+      read_only: yes
+      full_access:
+      - "Administrators"
+      state: present

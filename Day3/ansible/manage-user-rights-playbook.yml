@@ -1,0 +1,14 @@
+- name: Manager user rights on windows
+  hosts: windows
+  tasks:
+  - name: Assign Logon locally permission to a user group
+    win_user_right:
+      name: SeInteractiveLogonRight
+      users:
+      - "Administrator"
+
+  - name: Assign access this computer from network permission
+    win_user_right:
+      name: SeNetworkLogonRight
+      users:
+      - "Administrator"
