@@ -131,3 +131,16 @@ ansible-playbook manage-user-rights-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/8043a16e-0896-41e9-9dc8-6e439dc05bec)
 ![image](https://github.com/user-attachments/assets/c9357e2b-5433-48cc-b0a7-1fc666994b34)
+
+## Lab - Managing windows regional setting from an ansible playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook manage-regional-settings-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/955f9f61-8bc4-4cf0-90c7-968ff19b1557)
+![image](https://github.com/user-attachments/assets/e04c6276-34b8-4180-88fc-18201e2592ab)
+![image](https://github.com/user-attachments/assets/2b3ef9df-f911-4a53-a820-9bb367a860ef)
