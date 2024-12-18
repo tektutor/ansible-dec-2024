@@ -156,3 +156,19 @@ ansible-playbook manage-windows-shared-folders-playbook.yml
 Expected output
 ![image](https://github.com/user-attachments/assets/29d76ee5-7b60-4fcc-8268-ed57b5e48ee6)
 ![image](https://github.com/user-attachments/assets/c58f6b25-a72d-4635-85a7-88834e191f1b)
+
+## Lab - Synchronize two folders two way using robocopy module in playbook
+```
+cd ~/ansible-dec-2024
+git pull
+cd Day3/ansible
+ansible-playbook robocopy-playbook.yml
+```
+
+Expected output
+![image](https://github.com/user-attachments/assets/134726dc-7a82-4224-b761-813d7a9b2b69)
+![image](https://github.com/user-attachments/assets/9ca7843a-c65e-4322-b375-9d7d1b5ac21d)
+![image](https://github.com/user-attachments/assets/0343bbb4-cb35-4b3c-b27c-bd43390e2bbc)
+![image](https://github.com/user-attachments/assets/b9ad8c74-3768-43a5-8ecf-6f1cff389f7e)
+![image](https://github.com/user-attachments/assets/3f3e8cc3-5ad7-46d9-a644-0a4f56759955)
+
