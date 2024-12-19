@@ -2,7 +2,7 @@
 
 ## Training feedback link
 <pre>
-https://survey.zohopublic.com/zs/ThCnlG   
+https://survey.zohopublic.com/zs/uzB5pH
 </pre>
 
 ## Post test link
